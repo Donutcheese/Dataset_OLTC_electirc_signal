@@ -20,3 +20,20 @@ This project targets oil-immersed tap changers, developing an AI-based fault dia
 ## OLTC Operational Characteristics
 The mechanical operation process of OLTC can be divided into 9 steps, with 3 steps involving significant electrical parameter changes (stable state, transition process, intermediate state). The electrical parameters used as inputs include current and output voltage.
 
+## Dataset instruction
+The sample_dataset folder contains input current and output voltage sample data for an On-Load Tap Changer (OLTC) under three different operating conditions. Each condition includes corresponding input current (.lin.csv) and output voltage (.Uout.csv) data files:
+
+Normal Operation:
+`normal_lin.csv` - Input current data under normal operating conditions
+`normal_Uout.csv` - Output voltage data under normal operating conditions
+
+ut3 Delay Condition:
+`ut3delay_lin.csv` - Input current data with ut3 parameter delay
+`ut3delay_Uout.csv` - Output voltage data with ut3 parameter delay
+
+ut4-6 Delay Condition:
+`ut4-6delay_lin.csv` - Input current data with ut4 to ut6 parameters delay
+`ut4-6delay_Uout.csv` - Output voltage data with ut4 to ut6 parameters delay
+
+Each data file contains results from 50 independent switching simulations, with each simulation recording 0.1 seconds of data at a sampling rate of 10,000Hz, resulting in 1001 time points per switching operation. These datasets can be used to train and test AI models for identifying and diagnosing normal operations and various fault conditions in on-load tap changers.
+
