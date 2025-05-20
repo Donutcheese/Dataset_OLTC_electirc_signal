@@ -37,3 +37,13 @@ ut4-6 Delay Condition:
 
 Each data file contains results from 50 independent switching simulations, with each simulation recording 0.1 seconds of data at a sampling rate of 10,000Hz, resulting in 1001 time points per switching operation. These datasets can be used to train and test AI models for identifying and diagnosing normal operations and various fault conditions in on-load tap changers.
 
+## Dataset Generation Scripts and Simulation Model
+
+The following files are provided for dataset generation and simulation:
+
+- `OLTC_simulation.slx`: Simulink model file, the source for all OLTC simulations.
+- `dataset_create.m`: MATLAB script for generating datasets under normal operating conditions.
+- `dataset_ut3_delay.m`: MATLAB script for generating datasets with ut3 parameter delay condition.
+- `dataset_ut456_delay.m`: MATLAB script for generating datasets with ut4, ut5, ut6 parameter delay condition.
+
+You can modify the parameters (such as `num_samples`) in the `.m` files to change the number of simulation runs and the size of the generated dataset. Each `.m` script will call the Simulink model to generate the corresponding data.
